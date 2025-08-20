@@ -286,6 +286,33 @@ const Contact: React.FC = () => {
                 </div>
               </form>
 
+              {/* Secondary CTA - Download Resume */}
+              <div className="mt-8 pt-6 border-t border-border">
+                <div className="text-center">
+                  <h4 className="text-lg font-poppins font-semibold mb-3 text-foreground">
+                    Want to know more about my background?
+                  </h4>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    Download my detailed resume to explore my technical skills, projects, and experience.
+                  </p>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="bg-gradient-to-r from-accent/5 to-primary/5 border-accent/20 hover:border-accent/40 hover:bg-gradient-to-r hover:from-accent/10 hover:to-primary/10 hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5 transition-all duration-300 glow-on-hover group"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/assets/KRakshitha_resume.pdf';
+                      link.download = 'KRakshitha_resume.pdf';
+                      link.click();
+                    }}
+                    aria-label="Download K Rakshitha's resume PDF"
+                  >
+                    <ExternalLink className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform duration-200" />
+                    Download Resume
+                  </Button>
+                </div>
+              </div>
+
               {/* Form Footer */}
               <div className="mt-6 pt-6 border-t border-border">
                 <p className="text-xs text-muted-foreground text-center">
