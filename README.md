@@ -1,73 +1,181 @@
-# Welcome to your Lovable project
+# K Rakshitha - Personal Portfolio
 
-## Project info
+A modern, responsive personal portfolio website showcasing expertise in Machine Learning and Artificial Intelligence.
 
-**URL**: https://lovable.dev/projects/7884a71e-eeca-43dc-aa1b-34aaf3bb717e
+## 🌟 Features
 
-## How can I edit this code?
+### Design & User Experience
+- **Modern Design System**: Midnight Navy (#0F172A) and Teal (#14B8A6) color palette
+- **Dark/Light Mode**: Auto-detection with manual toggle, remembers user preference  
+- **Responsive Design**: Mobile-first approach, optimized for all screen sizes
+- **Smooth Animations**: Scroll-reveal animations, hover effects, and micro-interactions
+- **Neural Network Motif**: Subtle background patterns reflecting AI/ML focus
 
-There are several ways of editing your application.
+### Sections
+- **Hero**: Professional headshot, value proposition, contact CTAs
+- **About**: Personal introduction with exploring current interests
+- **Skills**: Categorized technical skills with filter functionality
+- **Projects**: 4 featured projects with tech stacks and live demo links
+- **Experience**: Timeline view of internships with achievements
+- **Education**: Academic background with coursework and performance
+- **Achievements**: Competition results and recognition
+- **Certifications**: Industry credentials from Infosys, Udemy, AWS
+- **Contact**: Contact form with validation and quick connect options
 
-**Use Lovable**
+### Technical Features
+- **SEO Optimized**: Meta tags, structured data, semantic HTML
+- **Accessibility**: WCAG compliant, keyboard navigation, screen reader support
+- **Performance**: Lazy loading, optimized images, minimal bundle size
+- **Modern Stack**: React 18, TypeScript, Tailwind CSS, Vite
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7884a71e-eeca-43dc-aa1b-34aaf3bb717e) and start prompting.
+## 🚀 Quick Start
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
+- Node.js 18+ and npm
+- Modern web browser
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### Installation
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Build for Production
+```bash
+# Create production build
+npm run build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# Preview production build
+npm run preview
+```
 
-**Use GitHub Codespaces**
+## 📝 Customization Guide
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Adding Your Resume
+1. Replace `public/assets/KRakshitha_resume.pdf` with your PDF resume
+2. Keep the same filename for automatic functionality
+3. The download buttons will automatically serve your resume
 
-## What technologies are used for this project?
+### Updating Content
+Key files to modify:
 
-This project is built with:
+**Personal Information**:
+- `src/components/Hero.tsx` - Name, title, bio, location
+- `src/components/About.tsx` - About me section, current interests
+- `src/components/Contact.tsx` - Contact details, social links
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**Professional Content**:
+- `src/components/Skills.tsx` - Technical skills and competencies
+- `src/components/Projects.tsx` - Project portfolio with descriptions
+- `src/components/Experience.tsx` - Work experience and internships
+- `src/components/Education.tsx` - Academic background
+- `src/components/Achievements.tsx` - Awards and recognition
+- `src/components/Certifications.tsx` - Professional certifications
 
-## How can I deploy this project?
+### Connecting Contact Form
+The contact form is ready for integration with:
 
-Simply open [Lovable](https://lovable.dev/projects/7884a71e-eeca-43dc-aa1b-34aaf3bb717e) and click on Share -> Publish.
+**Email Services**:
+- [Formspree](https://formspree.io): Add `action` attribute to form
+- [EmailJS](https://emailjs.com): Replace form handler in `Contact.tsx`
+- [Netlify Forms](https://netlify.com/products/forms): Add `netlify` attribute
 
-## Can I connect a custom domain to my Lovable project?
+**Example Formspree Integration**:
+```tsx
+// In src/components/Contact.tsx
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+```
 
-Yes, you can!
+### Customizing Design
+**Colors**: Edit `src/index.css` design system variables
+**Fonts**: Update Google Fonts link in `index.html` and font families in `tailwind.config.ts`
+**Components**: Modify individual component files for layout changes
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Adding New Sections
+1. Create component in `src/components/`
+2. Import and add to `src/pages/Index.tsx`
+3. Add navigation link to `src/components/Navigation.tsx`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Midnight Navy (#0F172A) - Professional, trustworthy
+- **Accent**: Teal (#14B8A6) - Modern, tech-forward  
+- **Neutral**: Soft Gray (#E5E7EB) - Clean, minimal
+
+### Typography
+- **Headings**: Poppins (600-800 weight)
+- **Body**: Inter (400-600 weight)
+- **Base Size**: 16px with 1.6 line height
+
+### Spacing & Layout
+- **Max Width**: 1280px centered
+- **Grid**: CSS Grid with responsive breakpoints
+- **Spacing**: Consistent 8px base unit
+
+## 📱 Browser Support
+- Chrome/Edge 90+
+- Firefox 88+
+- Safari 14+
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🔧 Development
+
+### Project Structure
+```
+src/
+├── components/          # React components
+│   ├── ui/             # Reusable UI components
+│   ├── Hero.tsx        # Landing section
+│   ├── About.tsx       # About section  
+│   └── ...            # Other sections
+├── assets/             # Images and static files
+├── hooks/              # Custom React hooks
+├── lib/                # Utilities
+└── pages/              # Page components
+```
+
+### Key Dependencies
+- **React 18**: UI library
+- **TypeScript**: Type safety
+- **Tailwind CSS**: Styling framework
+- **Lucide React**: Icon library
+- **Radix UI**: Accessible components
+- **React Hook Form**: Form handling
+- **React Query**: Data fetching
+
+## 🚀 Deployment
+
+### Recommended Platforms
+- **Vercel**: Automatic deployments from Git
+- **Netlify**: Easy static site hosting
+- **GitHub Pages**: Free hosting for public repos
+
+### Custom Domain Setup
+Most platforms support custom domains. Add your domain in:
+- Vercel: Project Settings → Domains
+- Netlify: Site Settings → Domain Management
+
+## 📞 Support
+
+For questions about customization or issues:
+- Check existing documentation
+- Create GitHub issue for bugs
+- Refer to component library docs (Radix UI, Tailwind CSS)
+
+## 📄 License
+
+This portfolio template is open for personal and educational use. Please provide attribution when possible.
+
+---
+
+**Built with ❤️ using React, TypeScript, and Tailwind CSS**
