@@ -36,15 +36,40 @@ const Contact: React.FC = () => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission - replace with actual implementation
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'b89da4b9-5b6d-43df-b5e1-9d2b08af6ddc',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          from_name: 'Portfolio Contact Form',
+          subject: `New Contact Form Message from ${formData.name}`,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "✅ Thank you! Your message has been sent successfully.",
+          description: "I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "❌ Oops! Something went wrong. Please try again.",
+        description: "If the problem persists, please reach out via email directly.",
+        variant: "destructive"
+      });
+    }
     
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    
-    setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(false);
   };
 
