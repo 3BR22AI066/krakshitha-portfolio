@@ -17,8 +17,8 @@ const Projects: React.FC = () => {
         'Multi-sport support',
         'Responsive design'
       ],
-      demoUrl: '#',
-      githubUrl: '#',
+      demoUrl: 'https://github.com/3BR22AI066',
+      githubUrl: 'https://github.com/3BR22AI066',
       image: '/api/placeholder/400/250'
     },
     {
@@ -32,8 +32,8 @@ const Projects: React.FC = () => {
         'Interactive data visualizations',
         'AI-powered chatbot assistance'
       ],
-      demoUrl: '#',
-      githubUrl: '#',
+      demoUrl: 'https://github.com/3BR22AI066',
+      githubUrl: 'https://github.com/3BR22AI066',
       image: '/api/placeholder/400/250'
     },
     {
@@ -47,8 +47,8 @@ const Projects: React.FC = () => {
         'Responsive design',
         'Clean, modern interface'
       ],
-      demoUrl: '#',
-      githubUrl: '#',
+      demoUrl: 'https://github.com/3BR22AI066',
+      githubUrl: 'https://github.com/3BR22AI066',
       image: '/api/placeholder/400/250'
     },
     {
@@ -62,8 +62,8 @@ const Projects: React.FC = () => {
         'Intent recognition',
         'Backend API integration'
       ],
-      demoUrl: '#',
-      githubUrl: '#',
+      demoUrl: 'https://github.com/3BR22AI066',
+      githubUrl: 'https://github.com/3BR22AI066',
       image: '/api/placeholder/400/250'
     }
   ];
@@ -169,24 +169,21 @@ const Projects: React.FC = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 glow-on-hover"
-                    onClick={() => window.open(project.demoUrl, '_blank')}
+                    className="flex-1 glow-on-hover group/btn border-accent/20 hover:border-accent hover:bg-accent/5 hover:text-accent transition-all duration-300 hover:scale-105"
+                    onClick={() => window.open(project.githubUrl, '_blank', 'noopener,noreferrer')}
+                    aria-label={`View ${project.title} on GitHub`}
                   >
-                    <Play className="h-4 w-4 mr-2" />
+                    <Github className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200" />
+                    GitHub
+                  </Button>
+                  <Button
+                    size="sm"
+                    className="flex-1 bg-gradient-to-r from-accent to-accent-light hover:from-accent-dark hover:to-accent text-white glow-on-hover hover:scale-105 transition-all duration-300"
+                    onClick={() => window.open(project.demoUrl, '_blank', 'noopener,noreferrer')}
+                    aria-label={`View live demo of ${project.title}`}
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => window.open(project.githubUrl, '_blank')}
-                  >
-                    <Github className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                  >
-                    <ExternalLink className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
