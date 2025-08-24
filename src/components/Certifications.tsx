@@ -11,7 +11,7 @@ const Certifications: React.FC = () => {
       category: 'Programming',
       description: 'Comprehensive training in fundamental data structures and algorithmic problem-solving using Python.',
       skills: ['Python', 'Data Structures', 'Algorithms', 'Problem Solving'],
-      certificateUrl: '#',
+      certificateUrl: 'https://drive.google.com/file/d/1U162h66vI-M6NfvO8gfJqiT-kmsU3KXj/view?usp=sharing',
       verified: true,
       color: 'from-blue-500 to-blue-600'
     },
@@ -22,7 +22,7 @@ const Certifications: React.FC = () => {
       category: 'AI/ML',
       description: 'Advanced certification covering AI concepts, machine learning algorithms, and Python implementation.',
       skills: ['Artificial Intelligence', 'Python', 'Machine Learning', 'Neural Networks'],
-      certificateUrl: '#',
+      certificateUrl: 'https://drive.google.com/file/d/10JofkDcSb10Cf4CbWsnlvHGvvwhJCg3w/view?usp=sharing',
       verified: true,
       color: 'from-purple-500 to-purple-600'
     },
@@ -33,7 +33,7 @@ const Certifications: React.FC = () => {
       category: 'AI/ML',
       description: 'Comprehensive machine learning course covering both Python and R implementations with latest AI tools.',
       skills: ['Machine Learning', 'Python', 'R', 'ChatGPT', 'Data Science'],
-      certificateUrl: '#',
+      certificateUrl: 'https://drive.google.com/file/d/1P3LuAnGj3w-YrzH4S7-64wmIauBLOrnF/view?usp=sharing',
       verified: true,
       color: 'from-green-500 to-green-600'
     },
@@ -44,7 +44,7 @@ const Certifications: React.FC = () => {
       category: 'Cloud Computing',
       description: 'Foundational cloud computing certification covering AWS services and cloud architecture principles.',
       skills: ['AWS', 'Cloud Computing', 'Cloud Architecture', 'DevOps'],
-      certificateUrl: '#',
+      certificateUrl: 'https://drive.google.com/file/d/1P7NMRnUENwgObk23DCJeTduJCneRmHxk/view?usp=sharing',
       verified: true,
       color: 'from-orange-500 to-orange-600'
     }
@@ -178,7 +178,8 @@ const Certifications: React.FC = () => {
                     variant="outline"
                     size="sm"
                     className="w-full glow-on-hover group-hover:border-accent"
-                    onClick={() => window.open(cert.certificateUrl, '_blank')}
+                    onClick={() => window.open(cert.certificateUrl, '_blank', 'noopener,noreferrer')}
+                    aria-label={`View ${cert.title} certificate from ${cert.provider}`}
                   >
                     <Award className="h-4 w-4 mr-2" />
                     View Certificate

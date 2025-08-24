@@ -75,6 +75,7 @@ const Hero: React.FC = () => {
               <a 
                 href="mailto:rakshithakothapalli12@gmail.com"
                 className="p-3 rounded-full bg-card hover:bg-accent/10 border border-border hover:border-accent transition-all duration-300 hover:-translate-y-1 group"
+                aria-label="Send email to K Rakshitha"
               >
                 <Mail className="h-5 w-5 text-muted-foreground group-hover:text-accent" />
               </a>
@@ -83,6 +84,7 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-card hover:bg-accent/10 border border-border hover:border-accent transition-all duration-300 hover:-translate-y-1 group"
+                aria-label="Visit K Rakshitha's LinkedIn profile"
               >
                 <Linkedin className="h-5 w-5 text-muted-foreground group-hover:text-accent" />
               </a>
@@ -91,6 +93,7 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-card hover:bg-accent/10 border border-border hover:border-accent transition-all duration-300 hover:-translate-y-1 group"
+                aria-label="Visit K Rakshitha's GitHub profile"
               >
                 <Github className="h-5 w-5 text-muted-foreground group-hover:text-accent" />
               </a>

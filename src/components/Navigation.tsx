@@ -118,12 +118,12 @@ const Navigation: React.FC<NavigationProps> = ({ isDark, toggleTheme }) => {
               size="sm"
               className="glow-on-hover"
               onClick={() => {
-                // Placeholder for resume download
                 const link = document.createElement('a');
                 link.href = '/assets/KRakshitha_resume.pdf';
                 link.download = 'KRakshitha_resume.pdf';
                 link.click();
               }}
+              aria-label="Download K Rakshitha's resume PDF"
             >
               <Download className="h-4 w-4 mr-2" />
               Resume
@@ -183,6 +183,7 @@ const Navigation: React.FC<NavigationProps> = ({ isDark, toggleTheme }) => {
                   link.click();
                   setIsOpen(false);
                 }}
+                aria-label="Download K Rakshitha's resume PDF"
               >
                 <Download className="h-4 w-4 mr-2" />
                 Download Resume

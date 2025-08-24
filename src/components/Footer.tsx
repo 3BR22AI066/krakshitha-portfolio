@@ -86,10 +86,10 @@ const Footer: React.FC = () => {
                     <a
                       key={social.name}
                       href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={social.name !== 'Email' ? '_blank' : undefined}
+                      rel={social.name !== 'Email' ? 'noopener noreferrer' : undefined}
                       className={`p-3 bg-primary-light/50 rounded-lg hover:bg-accent/20 transition-all duration-300 hover:-translate-y-1 group ${social.color}`}
-                      title={social.name}
+                      aria-label={`Visit K Rakshitha's ${social.name} ${social.name === 'Email' ? '' : 'profile'}`}
                     >
                       <Icon className="h-5 w-5 text-primary-foreground/80 group-hover:text-current transition-colors duration-300" />
                     </a>
