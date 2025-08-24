@@ -11,19 +11,17 @@ const Experience: React.FC = () => {
       location: 'Remote',
       period: '2024',
       type: 'Internship',
-      description: 'Built an AI-based real estate chatbot for property recommendation with natural language understanding capabilities.',
+      description: 'Developed an AI-based real estate chatbot for property recommendation.',
       responsibilities: [
-        'Dataset preprocessing and feature engineering',
-        'Intent recognition system development',
-        'Flask backend integration and API design',
-        'Model training and evaluation'
+        'Developed an AI-based real estate chatbot for property recommendation',
+        'Worked on dataset preprocessing, intent recognition, and Flask backend integration'
       ],
       technologies: ['Python', 'Flask', 'NLP', 'Machine Learning', 'TensorFlow'],
       achievements: [
         'Successfully deployed chatbot with 85% accuracy in intent recognition',
         'Reduced property search time by 60% through intelligent recommendations'
       ],
-      certificateUrl: '#'
+      certificateUrl: 'https://drive.google.com/file/d/1izFEkgQrqMxVook45h6YXJ6P0VlNd-3v/view?usp=sharing'
     },
     {
       title: 'Python Developer Intern',
@@ -169,11 +167,12 @@ const Experience: React.FC = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="glow-on-hover"
-                      onClick={() => window.open(exp.certificateUrl, '_blank')}
+                      className="border-accent/20 hover:border-accent hover:bg-accent/5 hover:text-accent transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                      onClick={() => window.open(exp.certificateUrl, '_blank', 'noopener,noreferrer')}
+                      aria-label={`View ${exp.company} Certificate`}
                     >
                       <ExternalLink className="h-4 w-4 mr-2" />
-                      View Certificate
+                      View {exp.title === 'Machine Learning Intern' && exp.company === 'PRASUNET Internship Program' ? 'Internship Certificate' : 'Certificate'}
                     </Button>
                   </div>
                 </div>
