@@ -117,8 +117,8 @@ const Navigation: React.FC<NavigationProps> = ({ isDark, toggleTheme }) => {
               variant="outline" 
               size="sm"
               className="glow-on-hover"
-              onClick={() => window.open('https://drive.google.com/file/d/17CfxOJIudQHkAMQUKeanf29UH11xDhYJ/view?usp=sharing', '_blank', 'noopener,noreferrer')}
-              aria-label="Download Resume"
+              onClick={() => window.open('https://drive.google.com/uc?export=download&id=1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX', '_blank', 'noopener,noreferrer')}
+              aria-label="Download Resume PDF"
             >
               <Download className="h-4 w-4 mr-2" />
               Resume
@@ -172,10 +172,10 @@ const Navigation: React.FC<NavigationProps> = ({ isDark, toggleTheme }) => {
                 size="sm"
                 className="w-full mt-4"
                 onClick={() => {
-                  window.open('https://drive.google.com/file/d/17CfxOJIudQHkAMQUKeanf29UH11xDhYJ/view?usp=sharing', '_blank', 'noopener,noreferrer');
+                  window.open('https://drive.google.com/uc?export=download&id=1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX', '_blank', 'noopener,noreferrer');
                   setIsOpen(false);
                 }}
-                aria-label="Download Resume"
+                aria-label="Download Resume PDF"
               >
                 <Download className="h-4 w-4 mr-2" />
                 Download Resume

@@ -58,8 +58,8 @@ const Hero: React.FC = () => {
                 variant="outline" 
                 size="lg"
                 className="glow-on-hover"
-                onClick={() => window.open('https://drive.google.com/file/d/17CfxOJIudQHkAMQUKeanf29UH11xDhYJ/view?usp=sharing', '_blank', 'noopener,noreferrer')}
-                aria-label="Download Resume"
+                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX', '_blank', 'noopener,noreferrer')}
+                aria-label="Download Resume PDF"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
