@@ -54,16 +54,17 @@ const Hero: React.FC = () => {
                 Let's Connect
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="glow-on-hover"
-                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX', '_blank', 'noopener,noreferrer')}
+              <a 
+                href="https://drive.google.com/uc?export=download&id=17CfxOJIudQHkAMQUKeanf29UH11xDhYJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="K_Rakshitha_Resume.pdf"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-8 glow-on-hover"
                 aria-label="Download Resume PDF"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
-              </Button>
+              </a>
             </div>
 
             {/* Social Links */}

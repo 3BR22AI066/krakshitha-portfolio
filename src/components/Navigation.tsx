@@ -113,16 +113,17 @@ const Navigation: React.FC<NavigationProps> = ({ isDark, toggleTheme }) => {
             >
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
-            <Button 
-              variant="outline" 
-              size="sm"
-              className="glow-on-hover"
-              onClick={() => window.open('https://drive.google.com/uc?export=download&id=1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX', '_blank', 'noopener,noreferrer')}
+            <a 
+              href="https://drive.google.com/uc?export=download&id=17CfxOJIudQHkAMQUKeanf29UH11xDhYJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="K_Rakshitha_Resume.pdf"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 glow-on-hover"
               aria-label="Download Resume PDF"
             >
               <Download className="h-4 w-4 mr-2" />
               Resume
-            </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -167,19 +168,18 @@ const Navigation: React.FC<NavigationProps> = ({ isDark, toggleTheme }) => {
                   {item.label}
                 </a>
               ))}
-              <Button 
-                variant="outline" 
-                size="sm"
-                className="w-full mt-4"
-                onClick={() => {
-                  window.open('https://drive.google.com/uc?export=download&id=1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX', '_blank', 'noopener,noreferrer');
-                  setIsOpen(false);
-                }}
+              <a 
+                href="https://drive.google.com/uc?export=download&id=17CfxOJIudQHkAMQUKeanf29UH11xDhYJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="K_Rakshitha_Resume.pdf"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 w-full mt-4"
+                onClick={() => setIsOpen(false)}
                 aria-label="Download Resume PDF"
               >
                 <Download className="h-4 w-4 mr-2" />
                 Download Resume
-              </Button>
+              </a>
             </div>
           </div>
         )}
