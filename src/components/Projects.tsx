@@ -17,8 +17,7 @@ const Projects: React.FC = () => {
         'Multi-sport support',
         'Responsive design'
       ],
-      demoUrl: 'https://github.com/3BR22AI066',
-      githubUrl: 'https://github.com/3BR22AI066',
+      githubUrl: 'https://github.com/3BR22AI066/virtual_ticketing_system',
       image: '/api/placeholder/400/250'
     },
     {
@@ -32,8 +31,7 @@ const Projects: React.FC = () => {
         'Interactive data visualizations',
         'AI-powered chatbot assistance'
       ],
-      demoUrl: 'https://github.com/3BR22AI066',
-      githubUrl: 'https://github.com/3BR22AI066',
+      githubUrl: 'https://github.com/3BR22AI066/heart_disease_prediction',
       image: '/api/placeholder/400/250'
     },
     {
@@ -47,8 +45,7 @@ const Projects: React.FC = () => {
         'Responsive design',
         'Clean, modern interface'
       ],
-      demoUrl: 'https://github.com/3BR22AI066',
-      githubUrl: 'https://github.com/3BR22AI066',
+      githubUrl: 'https://github.com/3BR22AI066/Weather_app',
       image: '/api/placeholder/400/250'
     },
     {
@@ -62,8 +59,7 @@ const Projects: React.FC = () => {
         'Intent recognition',
         'Backend API integration'
       ],
-      demoUrl: 'https://github.com/3BR22AI066',
-      githubUrl: 'https://github.com/3BR22AI066',
+      githubUrl: 'https://github.com/3BR22AI066/Real-Estate-Chatbot',
       image: '/api/placeholder/400/250'
     }
   ];
@@ -165,25 +161,16 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-3">
+                <div className="flex justify-center">
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 glow-on-hover group/btn border-accent/20 hover:border-accent hover:bg-accent/5 hover:text-accent transition-all duration-300 hover:scale-105"
+                    className="bg-gradient-to-r from-primary/5 to-accent/5 border-accent/20 hover:border-accent hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:text-accent transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/20 glow-on-hover group/btn rounded-lg px-6"
                     onClick={() => window.open(project.githubUrl, '_blank', 'noopener,noreferrer')}
                     aria-label={`View ${project.title} on GitHub`}
                   >
                     <Github className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200" />
-                    GitHub
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="flex-1 bg-gradient-to-r from-accent to-accent-light hover:from-accent-dark hover:to-accent text-white glow-on-hover hover:scale-105 transition-all duration-300"
-                    onClick={() => window.open(project.demoUrl, '_blank', 'noopener,noreferrer')}
-                    aria-label={`View live demo of ${project.title}`}
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
+                    View on GitHub
                   </Button>
                 </div>
               </div>
