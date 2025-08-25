@@ -117,13 +117,8 @@ const Navigation: React.FC<NavigationProps> = ({ isDark, toggleTheme }) => {
               variant="outline" 
               size="sm"
               className="glow-on-hover"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/assets/KRakshitha_resume.pdf';
-                link.download = 'KRakshitha_resume.pdf';
-                link.click();
-              }}
-              aria-label="Download K Rakshitha's resume PDF"
+              onClick={() => window.open('https://drive.google.com/drive/folders/1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX?usp=sharing', '_blank', 'noopener,noreferrer')}
+              aria-label="Download Resume"
             >
               <Download className="h-4 w-4 mr-2" />
               Resume
@@ -177,13 +172,10 @@ const Navigation: React.FC<NavigationProps> = ({ isDark, toggleTheme }) => {
                 size="sm"
                 className="w-full mt-4"
                 onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/assets/KRakshitha_resume.pdf';
-                  link.download = 'KRakshitha_resume.pdf';
-                  link.click();
+                  window.open('https://drive.google.com/drive/folders/1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX?usp=sharing', '_blank', 'noopener,noreferrer');
                   setIsOpen(false);
                 }}
-                aria-label="Download K Rakshitha's resume PDF"
+                aria-label="Download Resume"
               >
                 <Download className="h-4 w-4 mr-2" />
                 Download Resume
