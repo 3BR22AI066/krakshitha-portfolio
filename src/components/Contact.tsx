@@ -324,7 +324,7 @@ const Contact: React.FC = () => {
                     size="lg"
                     variant="outline"
                     className="bg-gradient-to-r from-accent/5 to-primary/5 border-accent/20 hover:border-accent/40 hover:bg-gradient-to-r hover:from-accent/10 hover:to-primary/10 hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5 transition-all duration-300 glow-on-hover group"
-                    onClick={() => window.open('https://drive.google.com/drive/folders/1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX?usp=sharing', '_blank', 'noopener,noreferrer')}
+                    onClick={() => window.open('https://drive.google.com/file/d/17CfxOJIudQHkAMQUKeanf29UH11xDhYJ/view?usp=sharing', '_blank', 'noopener,noreferrer')}
                     aria-label="Download Resume"
                   >
                     <ExternalLink className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform duration-200" />
@@ -366,7 +366,7 @@ const Contact: React.FC = () => {
                 size="lg"
                 variant="outline"
                 className="glow-on-hover"
-                onClick={() => window.open('https://drive.google.com/drive/folders/1DiczV6KGFIXrNoeQCcj8Fq44nfTXC4zX?usp=sharing', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://drive.google.com/file/d/17CfxOJIudQHkAMQUKeanf29UH11xDhYJ/view?usp=sharing', '_blank', 'noopener,noreferrer')}
                 aria-label="Download Resume"
               >
                 <ExternalLink className="h-5 w-5 mr-2" />
